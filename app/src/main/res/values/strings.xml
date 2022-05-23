@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">UnderstandingIntents</string>
+
+    <string name="hello_text_view">Hello %1$s</string>
+    <string name="launch_url">Launch Url</string>
+    <string name="hello_activity">Hello Activity</string>
+
+    <!-- Here %1 defines that input will be provided at runtime
+        and $s signifies that input will be of string type -->
+    <string name="hello">Hello %1$s</string>
 </resources>

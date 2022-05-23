@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        // IMPLICIT INTENT
         // find View By id function is used to find and map our views from UI to code
         val launchUrlButton = findViewById<Button>(R.id.LaunchUrl)
 
@@ -36,6 +37,18 @@ class MainActivity : AppCompatActivity() {
             else {
                 Toast.makeText(this, "No Activity Found to handle this intent", Toast.LENGTH_SHORT).show()
             }
+        }
+
+
+        // EXPLICIT INTENT
+        val launchActivity = findViewById<Button>(R.id.launch_hello_activity)
+
+        launchActivity.setOnClickListener {
+            val intent = Intent(this, HelloActivity::class.java).apply {
+                putExtra("NAME", "JOHN")
+            }
+
+            startActivity(intent)
         }
     }
 }
